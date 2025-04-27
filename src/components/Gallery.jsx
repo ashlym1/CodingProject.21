@@ -19,7 +19,7 @@ function Gallery ({ tours, onRemove }) {
     </div>
   );
 }
-
+export default Gallery;
 
 
 

@@ -28,7 +28,7 @@ body {
     
     .tour-card {
       background: rgba(255, 255, 255, 0.15); 
-      border: 1px solid #ffe5b4; /* adding a border around the cards  */
+      border: 1px solid #f5e8d0; /* adding a border around the cards  */
       border-radius: 16px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       padding: 1rem;
@@ -36,7 +36,7 @@ body {
       flex-direction: column;
       transition: transform 0.3s ease;
       backdrop-filter: blur(6px); /* the background to be  more blended  */
-      color: #fff; /* text color  */
+      color: #ef7575; /* text color  */
     }
     
     .tour-card:hover {

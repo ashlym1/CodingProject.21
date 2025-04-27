@@ -5,6 +5,7 @@
 import { useState, useEffect } from 'react';
 import Gallery from './components/Gallery';
 import './App.css';
+import './components/styles/style.css'; // adding the styling 
 
 function App() {
   // b. Setting the state for tours, loading, and error 
@@ -43,6 +44,7 @@ const fetchTours = async () => { //
 // Else, render Gallery with tour data
   return ( // reder the app 
     <main>
+      <h1> Select your dream Vacation </h1> 
       {loading && <p>Loading,please wait ...</p>} {/* Loading message */}
       {error && <p> Warnign : Error has occured : {error}</p>} {/* Eroor  message */}
       {/*  Task 5 Refresh button, copilot prompt : 
