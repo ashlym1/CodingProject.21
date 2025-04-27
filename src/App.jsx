@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import 
-
+// Task 1 : Set up API and App structure, 
+// copilot promt :
+// Fetch tours from https://course-api.com/react-tours-project using useEffect
+// Store in state: tours, loading, error  )
 function App() {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
