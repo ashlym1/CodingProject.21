@@ -11,7 +11,7 @@ function App() {
     const fetchTours = async () => {
       setLoading(true);
       try {
-        const response = await fetch('https://course-api.com/react-tours-project');
+        const response = await fetch('https://www.course-api.com/react-tours-project');
         if (!response.ok) {
           throw new Error('Failed to fetch tours');
         }
@@ -31,7 +31,10 @@ function App() {
   const removeTour = (id) => {
     setTours(tours.filter((tour) => tour.id !== id));
   };
-
+// Task 4 Conditional rendering, copilot prompt : 
+// If loading is true, display "Loading..."
+// If error, display an error message
+// Else, render Gallery with tour data
   return (
     <main>
       {loading && <p>Loading...</p>}
