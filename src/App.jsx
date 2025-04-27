@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
-import 
-// Task 1 : Set up API and App structure, 
-// copilot promt :
-// Fetch tours from https://course-api.com/react-tours-project using useEffect
-// Store in state: tours, loading, error  )
+import Gallery from './components/Gallery';
+import './App.css';
+
 function App() {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,21 +28,15 @@ function App() {
     fetchTours();
   }, []);
 
+  const removeTour = (id) => {
+    setTours(tours.filter((tour) => tour.id !== id));
+  };
+
   return (
     <main>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
-      {!loading && !error && (
-        <section>
-          {tours.map((tour) => (
-            <div key={tour.id}>
-              <h2>{tour.name}</h2>
-              <p>{tour.info}</p>
-              <p>Price: ${tour.price}</p>
-            </div>
-          ))}
-        </section>
-      )}
+      {!loading && !error && <Gallery tours={tours} onRemove={removeTour} />}
     </main>
   );
 }
